@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clifton Coffee Roasters </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">Order before 10am for same day dispatch!</div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <ul class="nav-left">
+        <li class="top-link" data-menu="shop">
+          <a href="#" class="top-link-anchor">Shop Christmas <span class="arrow">▾</span></a>
+        </li>
+        <li class="top-link" data-menu="coffee">
+          <a href="#" class="top-link-anchor">Coffee <span class="arrow">▾</span></a>
+        </li>
+        <li class="top-link" data-menu="subs">
+          <a href="#" class="top-link-anchor">Subscriptions <span class="arrow">▾</span></a>
+        </li>
+        <li class="top-link" data-menu="acc">
+          <a href="#" class="top-link-anchor">Accessories <span class="arrow">▾</span></a>
+        </li>
+      </ul>
+
+      <div class="logo">CLIFTON<br><span>COFFEE ROASTERS</span></div>
+
+<ul class="nav-right">
+  <li><a href="#">Wholesale</a></li>
+  <li><a href="#">Education</a></li>
+  <li><a href="#">Our Ethos</a></li>
+
+  <li>
+    <a href="#">
+      <img class="default-img" src="Assets/white Customer.png" alt="User" />
+      <img class="hover-img" src="Assets/black Customer.png" alt="User Hover" />
+    </a>
+  </li>
+    <li>
+    <a href="#" id="search-btn">
+      <img class="default-img" src="Assets/white search.png" alt="Search" />
+      <img class="hover-img" src="Assets/black Search.png" alt="Search Hover" />
+    </a>
+  </li>
+  <li>
+    <a href="#" id="cart-btn">
+      <img class="default-img" src="Assets/white cart.png" alt="Cart" />
+      <img class="hover-img" src="Assets/black cart.png" alt="Cart Hover" />
+    </a>
+  </li>
+</ul>
+
+    </nav>
+<!-- Mega Menu -->
+<div class="mega-menu hidden" id="mega-menu">
+  <div class="mega-inner">
+    
+    
+    <div class="mega-left" id="mega-left">
+      <!-- Filled by JS -->
+    </div>
+
+
+    <div class="mega-right" id="mega-right">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</div>
+
+
+    
+    <div class="header-bottom-line"></div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+<div class="hero-bg">
+  <video autoplay muted loop playsinline>
+    <source src="Assets/Background Video.mp4" type="video/mp4">
+    <source src="Assets/Background Video.mp4" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+    <div class="hero-overlay">
+      <h1 class="hero-title">Bold Coffee Moments</h1>
+      <a href="#" class="shop-btn">
+        Shop Now </a>
+    </div>
+
+    <!-- Cart -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Shopping Cart (0)</h2>
+        <button id="close-cart" class="close-btn">×</button>
+    </div>
+    <div class="cart-body">
+        <p>Your cart is currently empty.</p>
+        <button class="continue-btn">Continue Browsing</button>
+    </div>
+</div>
+
+<div id="overlay" class="overlay"></div>
+
+
+<!-- Search  -->
+<div class="search-bar" id="search-bar">
+  <input type="text" placeholder="Search products..." />
+  <button id="search-close">&times;</button>
+</div>
+
+  </section>
+
+  <!-- Collections -->
+  <section class="collections">
+    <h2>Our Collections</h2>
+ <section class="collection-section">
+  <button class="slider-btn prev" id="collection-prev">&#10094;</button>
+  <div class="collection-slider">
+      <div class="carousel">
+        <div class="card">
+          <div class="img-container">
+            <img src="Assets/collection 1.png" class="main-img" alt="">
+            <img src="Assets/collection hover 1.png" class="hover-img" alt="">
+            <div class="overlay bottom-overlay">
+              <div class="overlay-content">
+                <h2>All Coffee</h2>
+                <p>Shop Now</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="Assets/collection2.png" class="main-img" alt="">
+            <img src="Assets/Collection-hover-2.png" class="hover-img" alt="">
+            <div class="overlay bottom-overlay">
+              <div class="overlay-content">
+                <h2>Clifton Tea</h2>
+                <p>Shop Now</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="Assets/collection3.png" class="main-img" alt="">
+            <img src="Assets/Collection-hover 3.png" class="hover-img" alt="">
+            <div class="overlay bottom-overlay">
+              <div class="overlay-content">
+                <h2>Clifton Merchandise</h2>
+                <p>Shop Now</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+  <button class="slider-btn next" id="collection-next">&#10095;</button>
+</section>
+    <div class="dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+   <span class="dot"></span>
+</div>
+
+  </section>
+
+  <!-- Products Section -->
+<section class="new-products">
+  <div class="section-header">
+    <h2>New Products</h2>
+    <p>Discover our premium coffee collections crafted for every taste!</p>
+  </div>
+
+  <div class="products-layout">
+  
+    <div class="left-collage grid-layout">
+      <div class="collage-item"><img src="Assets/collage1.png" alt=""><span>View More</span></div>
+      <div class="collage-item"><img src="Assets/collage 2.png" alt=""><span>View More</span></div>
+      <div class="collage-item"><img src="Assets/collage3.png" alt=""><span>View More</span></div>
+      <div class="collage-item"><img src="Assets/collage4.png" alt=""><span>View More</span></div>
+    </div>
+
+    <div class="right-products">
+      <div class="filters">
+        <button class="active" data-type="coffee">Coffee</button>
+        <button data-type="capsule">Capsule</button>
+        <button data-type="all">All</button>
+      </div>
+
+      <div class="product-slider">
+        <button class="slider-btn prev">&#10094;</button>
+
+        <div class="product-card">
+          <img src="Assets/Product-coffee-1.png" alt="">
+          <div class="card-info">
+            <h4>Panama Coffee</h4>
+            <p>Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.</p>
+            <span class="price">£13.50</span>
+            <div class="buy-now-container">
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="Assets/Product-coffee-2.png" alt="">
+          <div class="card-info">
+            <h4>Peru Coffee</h4>
+            <p>Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.</p>
+            <span class="price">£13.50</span>
+            <div class="buy-now-container">
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-btn next">&#10095;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Shop Coffee -->
+<section class="shop-coffee-section">
+  <div class="shop-coffee-banner">
+    <div class="text-content">
+      <h4>Clifton Coffee — Speciality Coffee</h4>
+      <h1>Shop coffee</h1>
+      <p>Discover your perfect cup of coffee—crafted to match your taste and style.<br>Wake up to perfection every day!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Clifton Capsule -->
+<section class="clifton-capsule">
+  <div class="slider-container">
+  
+    <div class="slider-text">
+        <div class="text-block">
+            <h1 id="main-text">Clifton Capsules</h1>
+            <p id="main-desc">The wait is finally over, our capsules are back and better than ever. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</p>
+<button class="read-more-btn">Read More</button>        
+          </div>
+        <div class="text-block faint">
+            <h1 id="next-text">Clifton Coffee</h1>
+            <p id="next-desc">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?</p>
+        <button class="read-more-btn">Read More</button>
+          </div>
+    </div>
+
+    <div class="slider-image">
+        <img id="slide-image" src="Assets/clifton capsule.png" alt="Slide Image">
+     <div class="clifton-dots">
+    <span class="dot-clifton active" data-index="0"></span>
+    <span class="dot-clifton" data-index="1"></span>
+    <span class="dot-clifton" data-index="2"></span>
+     <span class="dot-clifton" data-index="3"></span>
+</div>
+
+    </div>
+</div>
+</section>
+
+<!-- Favourite  -->
+<section class="favorites-section">
+  <h2>Our Favorites</h2>
+  <div class="favorites-slider">
+    <button class="prev-btn">&#8249;</button>
+    <div class="favorites-cards" id="favoritesCards">
+      <div class="fav-card">
+        <img src="Assets/packet 7 (2).png" alt="Peru">
+        <h4>Peru</h4>
+        <p>£13.50</p>
+        <div class="stars">★★★★★</div>
+   
+  <div class="fav-hover" style="background-image: url('Assets/fav-1-hover.png');">
+    <div class="hover-info">
+      <div class="hover-row"><span>Region</span><span></span><span>Ahuachapán</span></div>
+      <div class="hover-row"><span>Producer</span><span></span><span>Ricardo Lima</span></div>
+      <div class="hover-row"><span>Process</span><span></span><span>Natural</span></div>
+    </div>
+   
+    <button class="buy-btn">Buy Now</button>
+    
+  </div>
+  
+    <div class="detail-card">
+        <h2>Clifton Coffee Colombia</h2>
+        <p class="price">£13.50</p>
+        <div class="stars">★★★★★</div>
+
+        <div class="options">
+            <label>
+                Weight
+                <select>
+                    <option>250g</option>
+                    <option>500g</option>
+                </select>
+            </label>
+            <label>
+                Roast
+                <select>
+                    <option>Filter Roast</option>
+                    <option>Espresso Roast</option>
+                </select>
+            </label>
+            <label>
+                Wholebean or Ground
+                <select>
+                    <option>Wholebean</option>
+                    <option>Ground</option>
+                </select>
+            </label>
+        </div>
+
+     <div class="quantity">
+    <label>Quantity</label>
+    <div class="qty-box">
+        <button class="qty-btn minusBtn">-</button>
+        <span class="qtyValue">1</span>
+        <button class="qty-btn plusBtn">+</button>
+    </div>
+</div>
+
+        <button class="add-to-cart">Add To Cart</button>
+        <a href="#" class="read-btn">Read More</a>
+
+
+</div>
+      </div>
+      
+      <div class="fav-card">
+        <img src="Assets/packet 8.png" alt="Indonesia">
+        <h4>Indonesia</h4>
+        <p>£13.50</p>
+        <div class="stars">★★★★★</div>
+       
+  <div class="fav-hover" style="background-image: url('Assets/fav-2-hover.png');">
+    <div class="hover-info">
+      <div class="hover-row"><span>Region</span><span></span><span>Ahuachapán</span></div>
+      <div class="hover-row"><span>Producer</span><span></span><span>Ricardo Lima</span></div>
+      <div class="hover-row"><span>Process</span><span></span><span>Natural</span></div>
+    </div>
+   
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  
+    <div class="detail-card">
+        <h2>Clifton Coffee Colombia</h2>
+        <p class="price">£13.50</p>
+        <div class="stars">★★★★★</div>
+
+        <div class="options">
+            <label>
+                Weight
+                <select>
+                    <option>250g</option>
+                    <option>500g</option>
+                </select>
+            </label>
+            <label>
+                Roast
+                <select>
+                    <option>Filter Roast</option>
+                    <option>Espresso Roast</option>
+                </select>
+            </label>
+            <label>
+                Wholebean or Ground
+                <select>
+                    <option>Wholebean</option>
+                    <option>Ground</option>
+                </select>
+            </label>
+        </div>
+
+   <div class="quantity">
+    <label>Quantity</label>
+    <div class="qty-box">
+        <button class="qty-btn minusBtn">-</button>
+        <span class="qtyValue">1</span>
+        <button class="qty-btn plusBtn">+</button>
+    </div>
+</div>
+
+        <button class="add-to-cart">Add To Cart</button>
+        <a href="#" class="read-btn">Read More</a>
+    </div>
+</div>
+
+      </div>
+      <div class="fav-card">
+        <img src="Assets/packet 9.png" alt="Kenya">
+        <h4>Kenya</h4>
+        <p>£13.50</p>
+        <div class="stars">★★★★★</div>
+      
+  <div class="fav-hover" style="background-image: url('Assets/fav-3-hover.png');">
+    <div class="hover-info">
+      <div class="hover-row"><span>Region</span><span></span><span>Ahuachapán</span></div>
+      <div class="hover-row"><span>Producer</span><span></span><span>Ricardo Lima</span></div>
+      <div class="hover-row"><span>Process</span><span></span><span>Natural</span></div>
+    </div>
+    
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  
+    <div class="detail-card">
+        <h2>Clifton Coffee Colombia</h2>
+        <p class="price">£13.50</p>
+        <div class="stars">★★★★★</div>
+
+        <div class="options">
+            <label>
+                Weight
+                <select>
+                    <option>250g</option>
+                    <option>500g</option>
+                </select>
+            </label>
+            <label>
+                Roast
+                <select>
+                    <option>Filter Roast</option>
+                    <option>Espresso Roast</option>
+                </select>
+            </label>
+            <label>
+                Wholebean or Ground
+                <select>
+                    <option>Wholebean</option>
+                    <option>Ground</option>
+                </select>
+            </label>
+        </div>
+<div class="quantity">
+    <label>Quantity</label>
+    <div class="qty-box">
+        <button class="qty-btn minusBtn">-</button>
+        <span class="qtyValue">1</span>
+        <button class="qty-btn plusBtn">+</button>
+    </div>
+</div>
+
+        <button class="add-to-cart">Add To Cart</button>
+        <a href="#" class="read-btn">Read More</a>
+    </div>
+
+
+      </div>
+      <div class="fav-card">
+    <img src="Assets/packet 10.png" alt="Panama">
+    <h4>Panama</h4>
+    <p>£13.50</p>
+    <div class="stars">★★★★★</div>
+
+    <div class="fav-hover" style="background-image: url('Assets/packet 8.png');">
+        <div class="hover-info">
+            <div class="hover-row"><span>Region</span><span></span><span>Ahuachapán</span></div>
+            <div class="hover-row"><span>Producer</span><span></span><span>Ricardo Lima</span></div>
+            <div class="hover-row"><span>Process</span><span></span><span>Natural</span></div>
+        </div>
+       
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="detail-card">
+        <h2>Clifton Coffee Colombia</h2>
+        <p class="price">£13.50</p>
+        <div class="stars">★★★★★</div>
+
+        <div class="options">
+            <label>
+                Weight
+                <select>
+                    <option>250g</option>
+                    <option>500g</option>
+                </select>
+            </label>
+            <label>
+                Roast
+                <select>
+                    <option>Filter Roast</option>
+                    <option>Espresso Roast</option>
+                </select>
+            </label>
+            <label>
+                Wholebean or Ground
+                <select>
+                    <option>Wholebean</option>
+                    <option>Ground</option>
+                </select>
+            </label>
+        </div>
+<div class="quantity">
+    <label>Quantity</label>
+    <div class="qty-box">
+        <button class="qty-btn minusBtn">-</button>
+        <span class="qtyValue">1</span>
+        <button class="qty-btn plusBtn">+</button>
+    </div>
+</div>
+
+        <button class="add-to-cart">Add To Cart</button>
+        <a href="#" class="read-btn">Read More</a>
+    </div>
+</div>
+
+    <button class="next-btn">&#8250;</button>
+  </div>
+
+  <div class="fav-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  
+</div>
+</section>
+
+<!-- Subscription -->
+<section class="cta-section">
+
+  <div class="cta-card">
+
+    <div class="cta-content default">
+      <img src="Assets/subscription.png" alt="Subscriptions">
+      <div class="cta-text">
+        <h3>Subscriptions</h3>
+        <p>Ethically sourced and direct to your door</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+
+    <div class="cta-content hover">
+      <img src="Assets/subscription hover.png" alt="Premium Plan">
+      <div class="cta-text">
+        <h3>Subscriptions</h3>
+        <p>Ethically sourced and direct to your door</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-card">
+
+    <div class="cta-content default">
+      <img src="Assets/Brazil.png" alt="Brazil Trip">
+      <div class="cta-text">
+        <h3>Brazil Trip 2024</h3>
+        <p>Blogs</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+
+    <div class="cta-content hover">
+      <img src="Assets/Brazil hover.png" alt="Adventure Awaits">
+      <div class="cta-text">
+        <h3>Brazil Trip 2024</h3>
+        <p>Blogs</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Virtual Tours -->
+<section class="virtual-tours">
+  <div class="content">
+    <h2>Virtual Tours</h2>
+    <p>
+      Come and have a walk through our HQ, take a look at our roastery, training room, showrooms, cupping room and engineering bay!
+      A little bit on Future Virtual Ltd – We are a Brighton & Bristol based family business, covering the whole of the U.K. We are
+      leading the way in creating stunning, fully immersive & interactive 360 virtual tours across all industries such as business.
+    </p>
+    <button class="read-more-hover">Read More</button> 
+  </div>
+
+  <div class="image">
+    <img 
+      src="Assets/virtual tour.png" 
+      alt="Virtual Tour" 
+      class="default-img">
+    <img 
+      src="Assets/virtual tour hover.png" 
+      alt="Virtual Tour Hover" 
+      class="hover-img">
+  </div>
+</section>
+
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <h2>Thousands of 5 Star Reviews</h2>
+    <div class="reviews-container">
+      <div class="review-card">
+        <h3>★★★★★</h3>
+        <p class="title">All I can say is wow</p>
+        <p>The coffee Cometeer experience is incredible. It's having a high end cup of coffee from a boutique coffee shop at my fingertips</p>
+        <p class="author">Michel F.</p>
+      </div>
+      <div class="review-card">
+        <h3>★★★★★</h3>
+        <p class="title">All I can say is wow</p>
+        <p>The coffee Cometeer experience is incredible. It's having a high end cup of coffee from a boutique coffee shop at my fingertips</p>
+        <p class="author">Michel F.</p>
+      </div>
+      <div class="review-card">
+        <h3>★★★★★</h3>
+        <p class="title">All I can say is wow</p>
+        <p>The coffee Cometeer experience is incredible. It's having a high end cup of coffee from a boutique coffee shop at my fingertips</p>
+        <p class="author">Michel F.</p>
+      </div>
+    </div>
+   <div class="review-dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+   <span class="dot"></span>
+ 
+</div>
+
+  </section>
+
+  <!-- Instagram -->
+  <section class="instagram">
+    <h3>@cliftoncoffee</h3>
+    <p>Follow us on Instagram for the latest updates!</p>
+    <div class="insta-gallery">
+      <img src="Assets/Insta 1.png" alt="">
+      <img src="Assets/Insta 2.png" alt="">
+      <img src="Assets/Insta 3.png" alt="">
+      <img src="Assets/Insta 4.png" alt="">
+        <img src="Assets/Insta 5.png" alt="">
+    </div>
+ <div class="insta-dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+
+</div>
+
+
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Newsletter</h2>
+    <p>The latest coffees, offers and news from the Clifton.</p>
+    <div class="newsletter-box">
+      <input type="email" placeholder="Enter your email address">
+      <button>→</button>
+    </div>
+  </section>
+<footer>
+  <div class="footer-main">
+    <div class="footer-column">
+      <img src="Assets/B-Corp-Logo 2.png" alt="Certified B" class="certified-icon">
+     <div class="social-icons">
+  <a href="#"><img class="facebook-icon" src="Assets/Facebook.png" alt="Facebook"></a>
+  <a href="#"><img class="instagram-icon" src="Assets/Instagram.png" alt="Instagram"></a>
+  <a href="#"><img class="youtube-icon" src="Assets/YouTube.png" alt="YouTube"></a>
+</div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-column">
+      <h4>Shop</h4>
+      <p>Clifton Merchandise</p>
+      <p>Brewing Equipment</p>
+      <p>Clifton Hot Chocolate</p>
+      <p>Clifton Tea</p>
+      <p>Gift Card</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Coffee</h4>
+      <p>All Coffee</p>
+      <p>House Coffees</p>
+      <p>Single Origin</p>
+      <p>Clifton Capsules</p>
+      <p>Unparalleled Series</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Our Ethos</h4>
+      <p>About Us</p>
+      <p>Resources</p>
+      <p>Origin Films</p>
+      <p>Careers</p>
+      <p>HQ Virtual Tour</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <div class="contact-item">
+        <img src="Assets/Email.png" alt="Email">
+        <span>sales@cliftoncoffee.co.uk</span>
+      </div>
+      <div class="contact-item">
+        <img src="Assets/Phone.png" alt="Phone">
+        <span>+44 (0)1179 820 252</span>
+      </div>
+      <div class="contact-item">
+        <img src="Assets/Location.png" alt="Location">
+        <span>Write address here..</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>2025 © Clifton Coffee Roasters | Privacy Policy</p>
+    <img src="Assets/chatboot icon.png" alt="Chat" class="footer-chat-icon">
+  </div>
+</footer>
+
+   
+  <script src="script.js"></script>
+</body>
+</html>
