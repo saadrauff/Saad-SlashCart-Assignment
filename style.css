@@ -6,7 +6,7 @@
 
 html, body {
   overflow-x: auto;
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 }
 
 .main-wrapper {
-  width: 1400px;
+  width: 1350px;
   margin: 0 auto;
 }
 header, nav, main, footer {
@@ -36,7 +36,7 @@ img {
 
 header:hover, .nav-container:hover {
   background-color: white;
-  width: 1350px !important;
+  width: 1440px !important;
 }
 
 .mega-menu {
@@ -918,7 +918,7 @@ margin-left: 10px;
 }
 
 .shop-coffee-banner {
-  background-image: url('Assets/shop coffee.png');
+  background-image: url('shop coffee.png');
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
@@ -1676,5 +1676,8 @@ footer {
   cursor: pointer;
   margin-bottom: 100px;
 }
+
+
+
 
 
