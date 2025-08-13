@@ -16,8 +16,8 @@ const megaContent = {
     ],
     right: {
       current: [
-        { img: 'Assets/header-shop-1.png', title: 'Cadence Espresso', subtitle: 'Autumn Edition' },
-        { img: 'Assets/header-shop-2.png', title: 'E1 Project Espresso', subtitle: 'Finca Buena Vista' }
+        { img: 'header-shop-1.png', title: 'Cadence Espresso', subtitle: 'Autumn Edition' },
+        { img: 'header-shop-2.png', title: 'E1 Project Espresso', subtitle: 'Finca Buena Vista' }
       ]
     }
   },
@@ -45,8 +45,8 @@ const megaContent = {
     ],
     right: {
       all: [
-        { img: 'Assets/header-coffe-1.png', title: 'Cadence Espresso', subtitle: 'Autumn Edition' },
-        { img: 'Assets/header-coffee-2.png', title: 'El Project Espresso', subtitle: 'Finca Buena Vista' }
+        { img: 'header-coffe-1.png', title: 'Cadence Espresso', subtitle: 'Autumn Edition' },
+        { img: 'header-coffee-2.png', title: 'El Project Espresso', subtitle: 'Finca Buena Vista' }
       ]
     }
   },
@@ -73,8 +73,8 @@ const megaContent = {
     ],
     right: {
       monthly: [
-        { img: 'Assets/header-sub1-.png', title: 'Monthly Box', subtitle: 'Fresh Roast' },
-        { img: 'Assets/header-sub-2.png', title: 'Roaster Pick', subtitle: 'Variety Pack' }
+        { img: 'header-sub1-.png', title: 'Monthly Box', subtitle: 'Fresh Roast' },
+        { img: 'header-sub-2.png', title: 'Roaster Pick', subtitle: 'Variety Pack' }
       ]
     }
   },
@@ -114,8 +114,8 @@ const megaContent = {
     ],
     right: {
       mugs: [
-        { img: 'Assets/header-acces-1.png', title: 'Ceramic Mug', subtitle: 'Classic' },
-        { img: 'Assets/header-acces-2.png', title: 'Travel Mug', subtitle: 'Portable' }
+        { img: 'header-acces-1.png', title: 'Ceramic Mug', subtitle: 'Classic' },
+        { img: 'header-acces-2.png', title: 'Travel Mug', subtitle: 'Portable' }
       ]
     }
   }
@@ -279,16 +279,16 @@ dots.forEach((dot, index) => {
 
 const products = {
   coffee: [
-    { img: "Assets/Product-coffee-1.png", name: "Panama Coffee", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£15.50" },
-    { img: "Assets/Product-coffee-2.png", name: "Peru Coffee", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£13.50" }
+    { img: "Product-coffee-1.png", name: "Panama Coffee", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£15.50" },
+    { img: "Product-coffee-2.png", name: "Peru Coffee", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£13.50" }
   ],
   capsule: [
-    { img: "Assets/capsule-image 1.png ", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£13.50" },
-    { img: "Assets/capsule-image 1.png ", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£16.50" }
+    { img: "capsule-image 1.png ", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£13.50" },
+    { img: "capsule-image 1.png ", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£16.50" }
   ],
   all: [
-    { img: "Assets/Product-coffee-1.png", name: "Panama Coffee", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£15.50" },
-    { img: "Assets/apsule-image 1.png", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£16.90" }
+    { img: "Product-coffee-1.png", name: "Panama Coffee", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£15.50" },
+    { img: "capsule-image 1.png", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£16.90" }
   ]
 };
 
@@ -299,15 +299,15 @@ const collageContainer = document.querySelector(".left-collage");
 
 
 const collageHTML = `
-  <div class="collage-item"><img src="Assets/collage1.png"><span>View More</span></div>
-  <div class="collage-item"><img src="Assets/collage 2.png"><span>View More</span></div>
-  <div class="collage-item"><img src="Assets/collage3.png"><span>View More</span></div>
-  <div class="collage-item"><img src="Assets/collage4.png"><span>View More</span></div>
+  <div class="collage-item"><img src="collage1.png"><span>View More</span></div>
+  <div class="collage-item"><img src="collage 2.png"><span>View More</span></div>
+  <div class="collage-item"><img src="collage3.png"><span>View More</span></div>
+  <div class="collage-item"><img src="collage4.png"><span>View More</span></div>
 `;
 
 const singleImageHTML = `
   <div class="single-image">
-    <img src="Assets/Product-capsule.png" alt="Capsule Banner">
+    <img src="Product-capsule.png" alt="Capsule Banner">
     <span>View More</span>
   </div>
 `;
@@ -366,28 +366,28 @@ const slides = [
     {
         title: "Clifton Capsules",
         desc: "The wait is finally over, our capsules are back and better than ever. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...",
-        img: "Assets/clifton capsule.png",
+        img: "clifton capsule.png",
         nextTitle: "Clifton Coffee",
         nextDesc: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?"
     },
     {
         title: "Clifton Coffee",
         desc: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?",
-        img: "Assets/Clifton Coffee.png",
+        img: "Clifton Coffee.png",
         nextTitle: "Clifton Tea",
         nextDesc: "Our bright and zingy Earl Grey combines a traditional blend of high-quality Sicilian bergamot oil with Keemun tea harvested from the Qimen county of Anhui."
     },
     {
         title: "Clifton Tea",
         desc: "Our bright and zingy Earl Grey combines a traditional blend of high-quality Sicilian bergamot oil with Keemun tea harvested from the Qimen county of Anhui.",
-        img: "Assets/Cifton tea.png",
+        img: "Cifton tea.png",
         nextTitle: "Clifton Chai",
         nextDesc: "Chai is one of the most popular drinks in India, used in Ayurvedic medicine for its calming and revitalizing effect on the body and mind."
     },
       {
         title: "Clifton Chai",
         desc: "Chai is one of the most popular drinks in India, used in Ayurvedic medicine for its calming and revitalizing effect on the body and mind.",
-        img: "Assets/chay.png",
+        img: "chay.png",
         nextTitle: "Explore More",
         nextDesc: "Visit our collection for more products."
     }
@@ -570,3 +570,4 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Thank you for subscribing!');
 });
+
