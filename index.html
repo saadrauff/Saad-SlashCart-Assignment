@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Clifton Coffee Roasters </title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -16,16 +17,16 @@
     <nav class="nav-container">
       <ul class="nav-left">
         <li class="top-link" data-menu="shop">
-          <a href="#" class="top-link-anchor">Shop Christmas <span class="arrow">▾</span></a>
+          <a href="#" class="top-link-anchor">Shop Christmas <span class="arrow"></span></a>
         </li>
         <li class="top-link" data-menu="coffee">
-          <a href="#" class="top-link-anchor">Coffee <span class="arrow">▾</span></a>
+          <a href="#" class="top-link-anchor">Coffee <span class="arrow"></span></a>
         </li>
         <li class="top-link" data-menu="subs">
-          <a href="#" class="top-link-anchor">Subscriptions <span class="arrow">▾</span></a>
+          <a href="#" class="top-link-anchor">Subscriptions <span class="arrow"></span></a>
         </li>
         <li class="top-link" data-menu="acc">
-          <a href="#" class="top-link-anchor">Accessories <span class="arrow">▾</span></a>
+          <a href="#" class="top-link-anchor">Accessories <span class="arrow"></span></a>
         </li>
       </ul>
 
@@ -33,7 +34,9 @@
 
 <ul class="nav-right">
   <li><a href="#">Wholesale</a></li>
-  <li><a href="#">Education</a></li>
+  <li class="top-link" data-menu="education">
+          <a href="#" class="top-link-anchor">Education</a>
+        </li>
   <li><a href="#">Our Ethos</a></li>
 
   <li>
@@ -131,7 +134,7 @@
             <img src="collection hover 1.png" class="hover-img" alt="">
             <div class="overlay bottom-overlay">
               <div class="overlay-content">
-                <h2>All Coffee</h2>
+                <h3>All Coffee</h3>
                 <p>Shop Now</p>
               </div>
             </div>
@@ -144,7 +147,7 @@
             <img src="Collection-hover-2.png" class="hover-img" alt="">
             <div class="overlay bottom-overlay">
               <div class="overlay-content">
-                <h2>Clifton Tea</h2>
+                <h3>Clifton Tea</h3>
                 <p>Shop Now</p>
               </div>
             </div>
@@ -157,7 +160,7 @@
             <img src="Collection-hover 3.png" class="hover-img" alt="">
             <div class="overlay bottom-overlay">
               <div class="overlay-content">
-                <h2>Clifton Merchandise</h2>
+                <h3>Clifton Merchandise</h3>
                 <p>Shop Now</p>
               </div>
             </div>
@@ -243,7 +246,7 @@
     </div>
   </div>
 </section>
-  
+
 <!-- Clifton Capsule -->
 <section class="clifton-capsule">
   <div class="slider-container">
@@ -263,6 +266,8 @@
 
     <div class="slider-image">
         <img id="slide-image" src="clifton capsule.png" alt="Slide Image">
+
+        
      <div class="clifton-dots">
     <span class="dot-clifton active" data-index="0"></span>
     <span class="dot-clifton" data-index="1"></span>
@@ -273,7 +278,7 @@
     </div>
 </div>
 </section>
-  
+
 <!-- Favourite  -->
 <section class="favorites-section">
   <h2>Our Favorites</h2>
@@ -307,7 +312,8 @@
                 Weight
                 <select>
                     <option>250g</option>
-                    <option>500g</option>
+                     <option>1kg</option>
+                    <option>50g</option>
                 </select>
             </label>
             <label>
@@ -329,9 +335,9 @@
      <div class="quantity">
     <label>Quantity</label>
     <div class="qty-box">
+         <button class="qty-btn plusBtn">+</button>
+          <span class="qtyValue">1</span>
         <button class="qty-btn minusBtn">-</button>
-        <span class="qtyValue">1</span>
-        <button class="qty-btn plusBtn">+</button>
     </div>
 </div>
 
@@ -368,7 +374,8 @@
                 Weight
                 <select>
                     <option>250g</option>
-                    <option>500g</option>
+                     <option>1kg</option>
+                    <option>50g</option>
                 </select>
             </label>
             <label>
@@ -390,9 +397,9 @@
    <div class="quantity">
     <label>Quantity</label>
     <div class="qty-box">
+         <button class="qty-btn plusBtn">+</button>
+          <span class="qtyValue">1</span>
         <button class="qty-btn minusBtn">-</button>
-        <span class="qtyValue">1</span>
-        <button class="qty-btn plusBtn">+</button>
     </div>
 </div>
 
@@ -428,7 +435,8 @@
                 Weight
                 <select>
                     <option>250g</option>
-                    <option>500g</option>
+                      <option>1kg</option>
+                    <option>50g</option>
                 </select>
             </label>
             <label>
@@ -449,9 +457,9 @@
 <div class="quantity">
     <label>Quantity</label>
     <div class="qty-box">
+         <button class="qty-btn plusBtn">+</button>
+          <span class="qtyValue">1</span>
         <button class="qty-btn minusBtn">-</button>
-        <span class="qtyValue">1</span>
-        <button class="qty-btn plusBtn">+</button>
     </div>
 </div>
 
@@ -487,7 +495,8 @@
                 Weight
                 <select>
                     <option>250g</option>
-                    <option>500g</option>
+                      <option>1kg</option>
+                    <option>50g</option>
                 </select>
             </label>
             <label>
@@ -508,9 +517,9 @@
 <div class="quantity">
     <label>Quantity</label>
     <div class="qty-box">
+         <button class="qty-btn plusBtn">+</button>
+          <span class="qtyValue">1</span>
         <button class="qty-btn minusBtn">-</button>
-        <span class="qtyValue">1</span>
-        <button class="qty-btn plusBtn">+</button>
     </div>
 </div>
 
@@ -528,6 +537,7 @@
     <span class="dot"></span>
     <span class="dot"></span>
   </div>
+  
 </div>
 </section>
 
@@ -640,13 +650,39 @@
   <section class="instagram">
     <h3>@cliftoncoffee</h3>
     <p>Follow us on Instagram for the latest updates!</p>
-    <div class="insta-gallery">
+   <div class="insta-gallery">
+    <div class="insta-item">
       <img src="Insta 1.png" alt="">
-      <img src="Insta 2.png" alt="">
-      <img src="Insta 3.png" alt="">
-      <img src="Insta 4.png" alt="">
-        <img src="Insta 5.png" alt="">
+      <div class="insta-overlay">
+        <i class="fab fa-instagram"></i>
+      </div>
     </div>
+    <div class="insta-item">
+      <img src="Assets/Insta 2.png" alt="">
+      <div class="insta-overlay">
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+    <div class="insta-item">
+      <img src="Insta 3.png" alt="">
+      <div class="insta-overlay">
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+    <div class="insta-item">
+      <img src="Insta 4.png" alt="">
+      <div class="insta-overlay">
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+    <div class="insta-item">
+      <img src="Insta 5.png" alt="">
+      <div class="insta-overlay">
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+
  <div class="insta-dots">
   <span class="dot active"></span>
   <span class="dot"></span>
@@ -670,11 +706,11 @@
 <footer>
   <div class="footer-main">
     <div class="footer-column">
-      <img src="B-Corp-Logo 2.png" alt="Certified B" class="certified-icon">
+      <img src="Assets/B-Corp-Logo 2.png" alt="Certified B" class="certified-icon">
      <div class="social-icons">
-  <a href="#"><img class="facebook-icon" src="Facebook.png" alt="Facebook"></a>
-  <a href="#"><img class="instagram-icon" src="Instagram.png" alt="Instagram"></a>
-  <a href="#"><img class="youtube-icon" src="YouTube.png" alt="YouTube"></a>
+  <a href="https://www.facebook.com/cliftoncoffeeroasters?mibextid=ZbWKwL"><img class="facebook-icon" src="Facebook.png" alt="Facebook"></a>
+  <a href="https://www.instagram.com/cliftoncoffee?igsh=MXBoNXB3dml0M3hoaA=="><img class="instagram-icon" src="Instagram.png" alt="Instagram"></a>
+  <a href="https://youtube.com/@cliftoncoffee?si=rMubzXMqG2Ru5ZZk"><img class="youtube-icon" src="YouTube.png" alt="YouTube"></a>
 </div>
 
     </div>
@@ -711,7 +747,7 @@
       <h4>Contact Us</h4>
       <div class="contact-item">
         <img src="Email.png" alt="Email">
-        <span>sales@cliftoncoffee.co.uk</span>
+        <span class="hover-underline">sales@cliftoncoffee.co.uk</span>
       </div>
       <div class="contact-item">
         <img src="Phone.png" alt="Phone">
@@ -719,7 +755,7 @@
       </div>
       <div class="contact-item">
         <img src="Location.png" alt="Location">
-        <span>Write address here..</span>
+        <span class="hover-underline">Write address here..</span>
       </div>
     </div>
   </div>
@@ -734,5 +770,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
