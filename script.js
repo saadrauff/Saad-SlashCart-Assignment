@@ -1,6 +1,8 @@
+// Shortcuts
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 
+// Mega menu data
 const megaContent = {
   shop: {
     leftCols: [
@@ -58,12 +60,12 @@ const megaContent = {
         items: [
           { id: 'monthly', label: 'Single Origin Subscription' },
           { id: 'weekly', label: 'House Coffee Subscription' },
-           { id: 'monthly', label: 'Single Origin Subscription Videos' },
-            { id: 'monthly', label: 'Log in' }
+          { id: 'monthly', label: 'Single Origin Subscription Videos' },
+          { id: 'monthly', label: 'Log in' }
         ]
       },
       {
-         title: "Coffees Type",
+        title: "Coffees Type",
         items: [
           { id: 'whole', label: 'Wholebean' },
           { id: 'filter', label: 'Filter grind' },
@@ -97,7 +99,7 @@ const megaContent = {
           { id: 'tools', label: 'Tools' }
         ]
       },
-         {
+      {
         title: "BrandsAcaia",
         items: [
           { id: 'mugs', label: 'Aeropress' },
@@ -118,22 +120,41 @@ const megaContent = {
         { img: 'header-acces-2.png', title: 'Travel Mug', subtitle: 'Portable' }
       ]
     }
+  },
+education: {
+    leftCols: [
+      {
+        title: "Training Guides",
+        items: [
+          { id: 'book', label: 'Book Training' },
+          { id: 'videos', label: 'Training Videos' },
+          { id: 'edu', label: 'Our Education' },
+          { id: 'calendar', label: 'Training Calendar' }
+        ]
+      }
+    ],
+    right: {
+      book: [
+        { img: 'Education-1.png', title: 'Training Videos', subtitle: 'Coffee Training Videos' },
+        { img: 'Education-2.png', title: 'Training & Support', subtitle: 'Award winning training and support' }
+      ]
+    }
   }
 };
 
+
+// DOM elements
 const topLinks = $$('.top-link');
 const mega = $('#mega-menu');
 const megaLeft = $('#mega-left');
 const megaRight = $('#mega-right');
 
 let activeTop = null;
-let activeLeftKey = null;
 
 function openMega(menuKey) {
   const data = megaContent[menuKey];
   if (!data) return;
 
- 
   megaLeft.innerHTML = data.leftCols.map(col => {
     return `
       <div class="left-col">
@@ -145,18 +166,9 @@ function openMega(menuKey) {
     `;
   }).join('');
 
- 
   const defaultKey = data.leftCols[0].items[0].id;
-
-
   renderMegaRight(menuKey, defaultKey);
 
-
-  megaLeft.querySelectorAll('.left-item').forEach(el => {
-    el.style.cursor = "default"; 
-  });
-
- 
   mega.classList.remove('hidden');
   mega.classList.add('show');
 }
@@ -177,38 +189,40 @@ function renderMegaRight(menuKey, leftId) {
   }).join('');
 }
 
-
+// Hover events
 topLinks.forEach(t => {
-  t.addEventListener('click', e => {
-    e.preventDefault();
-    const key = t.dataset.menu;
+  const key = t.dataset.menu;
 
-    if (activeTop === key) {
-      activeTop = null;
-      mega.classList.remove('show');
-      mega.classList.add('hidden');
-      t.querySelector('.arrow').style.transform = '';
-      return;
-    }
-
-   
-    topLinks.forEach(x => x.querySelector('.arrow').style.transform = '');
-    t.querySelector('.arrow').style.transform = 'rotate(180deg)';
-
+  t.addEventListener('mouseenter', () => {
     activeTop = key;
+   topLinks.forEach(x => {
+  const arrow = x.querySelector('.arrow');
+  if (arrow) arrow.style.transform = '';
+});
+
+const arrow = t.querySelector('.arrow');
+if (arrow) arrow.style.transform = 'rotate(135deg)';
+
     openMega(key);
+  });
+
+  t.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!mega.matches(':hover') && !t.matches(':hover')) {
+        mega.classList.remove('show');
+        mega.classList.add('hidden');
+        t.querySelector('.arrow').style.transform = '';
+        activeTop = null;
+      }
+    }, 200);
   });
 });
 
-
-document.addEventListener('click', (ev) => {
-  const target = ev.target;
-  if (!target.closest('.nav-container') && !target.closest('.mega-menu')) {
-    topLinks.forEach(x => x.querySelector('.arrow').style.transform = '');
-    mega.classList.remove('show');
-    mega.classList.add('hidden');
-    activeTop = null;
-  }
+mega.addEventListener('mouseleave', () => {
+  mega.classList.remove('show');
+  mega.classList.add('hidden');
+  topLinks.forEach(x => x.querySelector('.arrow').style.transform = '');
+  activeTop = null;
 });
 
 const cartBtn = document.getElementById('cart-btn');
@@ -288,7 +302,7 @@ const products = {
   ],
   all: [
     { img: "Product-coffee-1.png", name: "Panama Coffee", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£15.50" },
-    { img: "capsule-image 1.png", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£16.90" }
+    { img: "apsule-image 1.png", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£16.90" }
   ]
 };
 
@@ -570,4 +584,3 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Thank you for subscribing!');
 });
-
