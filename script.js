@@ -1,8 +1,6 @@
-// Shortcuts
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 
-// Mega menu data
 const megaContent = {
   shop: {
     leftCols: [
@@ -142,8 +140,6 @@ education: {
   }
 };
 
-
-// DOM elements
 const topLinks = $$('.top-link');
 const mega = $('#mega-menu');
 const megaLeft = $('#mega-left');
@@ -189,7 +185,6 @@ function renderMegaRight(menuKey, leftId) {
   }).join('');
 }
 
-// Hover events
 topLinks.forEach(t => {
   const key = t.dataset.menu;
 
@@ -584,4 +579,5 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Thank you for subscribing!');
 });
+
 
