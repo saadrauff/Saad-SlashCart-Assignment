@@ -16,7 +16,7 @@ JavaScript
 
 🚀 Live Demo
 
-(https://vermillion-pony-ad66ab.netlify.app/)
+(https://bespoke-starburst-a2ad83.netlify.app/)
 
 👤 Author
 
