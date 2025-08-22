@@ -302,7 +302,7 @@ const products = {
   ],
   all: [
     { img: "Product-coffee-1.png", name: "Panama Coffee", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£15.50" },
-    { img: "apsule-image 1.png", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£16.90" }
+    { img: "capsule-image 1.png", name: "House Espresso Capsule", desc: "Introducing El Vergel Estate, a vibrant new coffee from the Bayter family’s innovative farm in Fresno, Tolima. This Red and Yellow Caturra variety.", price: "£16.90" }
   ]
 };
 
@@ -584,3 +584,4 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Thank you for subscribing!');
 });
+
