@@ -266,7 +266,7 @@ header:hover, .nav-container:hover {
 .mega-left {
   display: flex;
   gap: 40px;
-  width: 350px;
+  width: 450px;
 }
 
 .left-col {
@@ -1898,6 +1898,7 @@ footer {
 .footer-bottom p {
   margin: 20px;
 }
+
 
 
 
