@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,46 +6,54 @@
 }
 
 html, body {
-  overflow-x: auto;
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #111;
   background: #fff;
-  min-width: 1350px; 
+  /* removed min-width for responsiveness */
 }
 
+/* Main wrapper / page container */
 .main-wrapper {
-  width: 1400px;
+  width: 100%;
+  max-width: 1350px; /* keeps desktop layout similar */
   margin: 0 auto;
+  padding: 0 16px; /* small side padding for small screens */
+  box-sizing: border-box;
 }
+
+/* Generic container for sections that originally relied on fixed widths */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Keep semantics */
 header, nav, main, footer {
-   width: 1350px !important;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* remove forced nowrap globally — allow wrapping but preserve desktop layout via media queries */
 header, nav, .top-bar, .nav-container {
-  flex-wrap: nowrap !important;
-  white-space: nowrap !important;
+  /* default: allow wrapping on small screens */
+  flex-wrap: nowrap;
+  white-space: normal;
 }
 
+/* Images responsive */
 img {
-  max-width: none !important;
+  max-width: 100% !important;
   height: auto;
+  display: block;
 }
 
-header:hover, .nav-container:hover {
-  background-color: white;
-  width: 1350px !important;
-}
-
-.mega-menu {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1350px !important;
-}
 .top-bar { 
   background:#111; 
   color:#fff; 
@@ -52,6 +61,8 @@ header:hover, .nav-container:hover {
   padding:6px 8px; 
   font-size:0.9rem; 
 }
+
+
 .navbar {
   background-color: transparent;
   position: absolute;
@@ -1144,6 +1155,7 @@ margin-left: 10px;
 .fav-card {
   text-align: center;
   flex: 0 0 auto;
+    flex-shrink: 0; 
   position: relative;
 }
 
@@ -1313,7 +1325,7 @@ margin-left: 10px;
   left: 0;
   width: 100%;
   height: 100%;
- background: #E0E1DA;
+  background: #E0E1DA;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -1452,6 +1464,70 @@ margin-left: 10px;
   text-decoration: underline;
   color: black
 }
+.favorites-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.favorites-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.favorites-slider {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.fav-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fav-card img {
+  width: 100%;
+  height: 280px;     
+  object-fit: cover;  
+  display: block;
+}
+
+.fav-card-content {
+  flex: 1; 
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+
+.fav-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+.fav-card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.fav-card-content p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
 
 .cta-section {
   display: flex;
@@ -1899,7 +1975,429 @@ footer {
   margin: 20px;
 }
 
+   /* Responsive Media Queries */
 
+@media (max-width: 1200px) {
+  .main-wrapper {
+    max-width: 1100px;
+    padding: 0 14px;
+  }
 
+  .nav-container {
+    max-width: 100%;
+    padding: 10px 16px;
+  }
 
+  .mega-inner {
+    padding: 0 12px;
+    gap: 20px;
+  }
 
+  .hero-overlay h1,
+  .hero-overlay h2 {
+    font-size: calc(1.8rem + 1vw);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .collections h2 {
+    font-size: 3rem;
+  }
+
+  .products-layout {
+    display: block;
+    padding: 0 20px;
+  }
+
+  .left-collage.grid-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .right-products {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .product-card {
+    margin: 10px;
+  }
+
+  .favorites-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 14px;
+  }
+
+  .fav-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .insta-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .footer-main {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .slider-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .mega-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mega-left {
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .carousel .card {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo {
+    margin: 10px 0;
+    order: -1;
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    height: 60vh;
+    min-height: 400px;
+    padding: 20px 8px;
+  }
+
+  .favorites-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 0 12px;
+    justify-items: center;
+  }
+
+  .fav-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .shop-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .carousel {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    min-width: 100%;
+    margin: 0 0 12px 0;
+  }
+
+  .img-container {
+    height: auto;
+  }
+
+  .card .img-container img {
+    height: auto;
+  }
+
+  .products-layout {
+    display: block;
+    padding: 0 16px;
+  }
+
+  .left-collage,
+  .right-products {
+    width: 100%;
+  }
+
+  .left-collage.grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .single-image {
+    height: auto;
+  }
+
+  .favorites-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .fav-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .cta-section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .virtual-tours {
+    display: block;
+    padding: 30px 14px;
+  }
+
+  .virtual-tours .image {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .slider-image {
+    right: 10px;
+  }
+
+  .clifton-dots {
+    right: -20px;
+  }
+
+  .reviews-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 420px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+  .reviews-container .review-card {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .insta-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .footer-main {
+    display: block;
+    padding: 30px 16px;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-right li a img.default-img,
+  .nav-right li a img.hover-img {
+    width: 44px;
+    height: 44px;
+    margin-right: -18px;
+  }
+
+  .product-card {
+    width: 50%;
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .fav-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cart-sidebar {
+    max-width: 90%;
+    right: -100%;
+  }
+
+  .cart-sidebar.active {
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+    margin-top: 58px;
+  }
+
+  .collections h2,
+  .section-header h2,
+  .favorites-section h2,
+  .reviews h2,
+  .newsletter h2 {
+    font-size: 2rem;
+  }
+
+  .favorites-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .fav-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .product-card {
+    margin: 0 10px;
+    width: calc(50% - 20px);
+  }
+
+  .insta-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .text-block h1 {
+    font-size: 2rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 4px 8px;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    margin: 4px 0;
+  }
+
+  .top-link-anchor {
+    justify-content: center;
+  }
+
+  .cart-sidebar {
+    max-width: 100%;
+    right: -100%;
+  }
+
+  .newsletter-box {
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .newsletter-box input,
+  .newsletter-box button {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .reviews-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 350px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+  .reviews-container .review-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .shop-coffee-banner {
+    padding: 80px 12px;
+  }
+
+  .hero-overlay h1 {
+    padding: 0 8px;
+  }
+
+  .footer-chat-icon {
+    position: static;
+    margin-top: 16px;
+    right: auto;
+    bottom: auto;
+  }
+}
+
+@media print {
+  .navbar,
+  .hero-bg,
+  .slider-btn,
+  .buy-now,
+  .read-more-btn,
+  .footer-chat-icon {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
