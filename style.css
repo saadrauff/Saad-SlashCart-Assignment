@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,19 +12,19 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #111;
   background: #fff;
-  /* removed min-width for responsiveness */
+
 }
 
-/* Main wrapper / page container */
+
 .main-wrapper {
   width: 100%;
-  max-width: 1350px; /* keeps desktop layout similar */
+  max-width: 1350px; 
   margin: 0 auto;
-  padding: 0 16px; /* small side padding for small screens */
+  padding: 0 16px; 
   box-sizing: border-box;
 }
 
-/* Generic container for sections that originally relied on fixed widths */
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -34,20 +33,19 @@ body {
   box-sizing: border-box;
 }
 
-/* Keep semantics */
+
 header, nav, main, footer {
   width: 100%;
   box-sizing: border-box;
 }
 
-/* remove forced nowrap globally — allow wrapping but preserve desktop layout via media queries */
+
 header, nav, .top-bar, .nav-container {
-  /* default: allow wrapping on small screens */
   flex-wrap: nowrap;
   white-space: normal;
 }
 
-/* Images responsive */
+
 img {
   max-width: 100% !important;
   height: auto;
@@ -2401,3 +2399,4 @@ footer {
     text-decoration: underline;
   }
 }
+
